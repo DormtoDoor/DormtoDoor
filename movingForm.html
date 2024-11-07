@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Company Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Moving Service Form</h1>
+        <form action="/submit-form" method="POST">
+            <!-- Student Information -->
+            <div class="form-group">
+                <label for="student-name">Name</label>
+                <input type="text" id="student-name" name="student_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student_id" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Address Information -->
+            <div class="form-group">
+                <label for="current-address">Current Address</label>
+                <textarea id="current-address" name="current_address" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="next-address">Next Address</label>
+                <textarea id="next-address" name="next_address" rows="3" required></textarea>
+            </div>
+
+            <!-- Moving Information -->
+            <div class="form-group">
+                <label for="num-boxes">Number of Boxes Needed</label>
+                <input type="number" id="num-boxes" name="num_boxes" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="storage">Will you need storage?</label>
+                <select id="storage" name="storage" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="moving-date">Preferred Moving Date</label>
+                <input type="date" id="moving-date" name="moving_date" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
