@@ -7,7 +7,7 @@
 
 /* Hero Section with Background Image */
 .hero-section {
-    background-image: url('https://example.com/college-student-with-boxes.jpg'); /* Replace with actual URL */
+    background-image: url('DormtoDoorMovingCompany_Art/bannerImage.jpg'); /* Replace with actual URL */
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -49,7 +49,7 @@
 .signup-button {
     padding: 12px 24px;
     font-size: 1rem;
-    background-color: #1e90ff;
+    background-color: #f28c28;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -57,14 +57,25 @@
 }
 
 .signup-button:hover {
-    background-color: #1c86ee;
+    background-color: #ff600f;
 }
 
 /* About Section */
 .about-section {
+    display: flex;
+    justify-content:center;
     padding: 40px;
     background-color: #f9f9f9;
     text-align: center;
+    align-items:normal;
+    gap: 10px;
+} 
+
+@media (max-width: 768px) {
+    .about-section {
+        display: block; /* Stacks items vertically */
+    }
+
 }
 
 .about-section h2 {
@@ -94,7 +105,7 @@
 /* Sign-Up Section */
 .signup-section {
     padding: 40px;
-    background-color: #1e90ff;
+    background-color: #f28c28;
     color: white;
     text-align: center;
 }
@@ -111,7 +122,7 @@
 
 .signup-section .signup-button {
     background-color: white;
-    color: #1e90ff;
+    color: #f28c28;
     padding: 12px 24px;
     font-size: 1rem;
     text-decoration: none;
