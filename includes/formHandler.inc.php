@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $student_id = $_POST["student_id"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
-    $current_adress = $_POST["current_address"];
+    $current_address = $_POST["current_address"];
     $next_address = $_POST["next_address"];
     $num_boxes = $_POST["num_boxes"];
     $moving_date = $_POST["moving_date"];
@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $query = "INSERT INTO users(student_name, student_id, email, phone, current_address, next_address, num_boxes, moving_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 
         $stmt = $pdo->prepare($query);
-        $stmt->execute([$student_name, $student_id, $email, $phone, $current_adress, $num_boxes, $moving_date]);
+        $stmt->execute([$student_name, $student_id, $email, $phone, $current_address, $next_address, $num_boxes, $moving_date]);
         $pdo = null;
         $stmt = null;
 
@@ -26,3 +26,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 } else {
     header("location: ../movingForm.html");
 }
+
