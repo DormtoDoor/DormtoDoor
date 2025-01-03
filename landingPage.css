@@ -1,15 +1,41 @@
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "playfair Display", sans-serif;
 }
 
+.Banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: #0077b6; 
+    color: white; 
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+}
 /* Hero Section with Background Image */
 .hero-section {
-    background-image: url('DormtoDoorMovingCompany_Art/bannerImage.jpg'); /* Replace with actual URL */
+    background-image: url('DormtoDoorMovingCompany_Art/newBanner.svg'); /* Replace with actual URL */
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -17,6 +43,7 @@
     color: white;
     text-align: center;
     position: relative;
+    
 }
 
 .hero-section::before {
@@ -33,12 +60,12 @@
     position: relative;
     z-index: 1;
     max-width: 800px;
-    padding: 20px;
+    padding: 15px;
+    background-color: #00000043;
 }
 
 .hero-text h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
 .hero-text p {
@@ -46,66 +73,146 @@
     margin-bottom: 20px;
 }
 
+.hero-section-title.bebas-neue-regular {
+    font-size: 5rem;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, .9);
+    color: #3bc7ff;
+    
+}
+
 .signup-button {
     padding: 12px 24px;
-    font-size: 1rem;
-    background-color: #f28c28;
+    font-size: 3rem;
+    background-color: #0077b6;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
+    box-shadow: 4px 6px rgba(255, 255, 255, 0.587); /* Basic shadow */
 }
 
 .signup-button:hover {
-    background-color: #ff600f;
+    background-color: #0C2340;
+    box-shadow: 4px 6px rgba(255, 255, 255, 0.167);
 }
-
+/*info section*/
+.info-section {
+    background-color: #f9f9f9;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 50"><text x="0" y="20" fill="rgba(211,211,211, .5)" font-size="30" font-family="Arial" transform="rotate(-30, 100, 25)">Dorm to Door</text></svg>');
+    background-repeat: repeat;
+}
 /* About Section */
 .about-section {
     display: flex;
     justify-content:center;
     padding: 40px;
-    background-color: #f9f9f9;
     text-align: center;
     align-items:normal;
     gap: 10px;
+    width: 100%;
 } 
 
-@media (max-width: 768px) {
-    .about-section {
-        display: block; /* Stacks items vertically */
-    }
-
+.about-image img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2 {
     font-size: 2rem;
-    color: #333;
+    color: #000000;
     margin-bottom: 20px;
+    background-color: rgba(211, 211, 211, 0.075);
 }
 
 .about-section p {
     font-size: 1.1rem;
-    color: #555;
+    color: #000000;
     max-width: 800px;
     margin: 0 auto 20px;
+    background-color: rgba(211, 211, 211, 0.075);
 }
 
 .about-section ul {
     list-style-type: none;
     margin-top: 20px;
     font-size: 1.1rem;
-    color: #555;
+    color: #000000;
+    background-color: rgba(211, 211, 211, 0.075);
 }
 
 .about-section li {
     margin-bottom: 10px;
 }
 
+/*FAQ section*/
+.FAQ-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.FAQ-images {
+    display: flex;
+    gap: 20px;
+    flex: 1 1 45%;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+.FAQ-images img:nth-child(1) {
+    transform: translateY(-40px); /* Moves the first image 20px higher */
+}
+
+.FAQ-images img:nth-child(2) {
+    transform: translateY(40px); /* Moves the second image 20px lower */
+}
+.FAQ-images img {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.FAQ-content {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.FAQ-content h2 {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.FAQ-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.FAQ-content li {
+    margin-bottom: 20px;
+}
+
+.FAQ-content li p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.FAQ-content li strong {
+    color: #0C2340;
+}
+
 /* Sign-Up Section */
 .signup-section {
     padding: 40px;
-    background-color: #f28c28;
+    background-color: #0C2340;
     color: white;
     text-align: center;
 }
@@ -121,15 +228,57 @@
 }
 
 .signup-section .signup-button {
-    background-color: white;
-    color: #f28c28;
+    background-color: rgb(255, 255, 255);
+    color: #0C2340;
     padding: 12px 24px;
-    font-size: 1rem;
+    font-size: 3rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    box-shadow: 4px 6px rgba(255, 255, 255, 0.587);
+
 }
 
 .signup-section .signup-button:hover {
-    background-color: #f1f1f1;
+    background-color: #d5d5f0;
+    box-shadow: 4px 6px rgba(255, 255, 255, 0.167);
 }
+
+@media (max-width: 1340px) {
+    #image2 {
+        display: none;
+    }
+
+    #image1 {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .about-section {
+        display: block; /* Stacks items vertically */
+    }
+    .FAQ-images {
+        display: none; /* Fully hide the FAQ-images container */
+    }
+    .FAQ-content {
+        width: 100%; /* Ensure FAQ content takes up the full width */
+    }
+    .FAQ-images img {
+        display: none; /* Hide all images on mobile */
+    }
+    .FAQ-images.single-image img {
+        display: none; /* Ensure default hidden state */
+    }
+    .FAQ-images.single-image #image1 {
+        display: block; /* Only display personWithBox.jpg */
+    }
+}
+
+.FAQ-images.single-image #image1 {
+    display: block; /* Show personWithBox.jpg */
+}
+
+.FAQ-images.single-image #image2 {
+    display: none; /* Hide second image */
+}
+

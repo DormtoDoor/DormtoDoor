@@ -1,3 +1,15 @@
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+.poppins-black-italic {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+  }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,13 +17,24 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Playfair Display", serif;
+    font-size: 17.5px;
+    font-weight: 800;
+    font-style: normal;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f4f4f9;
     margin: 200px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 50"><text x="0" y="20" fill="rgba(211,211,211, .5)" font-size="30" font-family="Arial" transform="rotate(-30, 100, 25)">Dorm to Door</text></svg>');
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.form-title {
+    font-size: 4vw;
+    color: #3bc7ff;   
 }
 
 .form-container {
